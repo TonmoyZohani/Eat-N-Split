@@ -24,11 +24,11 @@ const initialFriends = [
 
 const FriendList = () => {
   return (
-    <div>
+    <ul>
       {initialFriends.map((friend) => (
         <Friend friend={friend} key={friend.id} />
       ))}
-    </div>
+    </ul>
   );
 };
 
