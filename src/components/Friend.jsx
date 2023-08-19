@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Friend = ({ friend }) => {
   return (
@@ -19,6 +20,8 @@ const Friend = ({ friend }) => {
       ) : (
         ""
       )}
+
+     <Button>Select</Button>
     </li>
   );
 };

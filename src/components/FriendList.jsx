@@ -28,6 +28,8 @@ const FriendList = () => {
       {initialFriends.map((friend) => (
         <Friend friend={friend} key={friend.id} />
       ))}
+
+      
     </ul>
   );
 };
