@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const FormSplitBill = () => {
   return (
@@ -19,6 +20,8 @@ const FormSplitBill = () => {
         <option value="user">You</option>
         <option value="friend">X</option>
       </select>
+
+      <Button>Split Bill</Button>
     </form>
   );
 };
