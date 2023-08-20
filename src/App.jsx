@@ -17,7 +17,8 @@ function App() {
     <div className="app">
       <div className="sidebar">
         <FriendList />
-        <FormAddFriend showAddFriend={showAddFriend} />
+        {showAddFriend && <FormAddFriend />}
+
         <Button handleShowFriend={handleShowFriend}>
           {" "}
           {showAddFriend === false ? "Add Friend" : "Close"}{" "}

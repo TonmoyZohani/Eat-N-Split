@@ -23,6 +23,9 @@ const initialFriends = [
 ];
 
 const FriendList = () => {
+
+  const [fr]
+
   return (
     <ul>
       {initialFriends.map((friend) => (
