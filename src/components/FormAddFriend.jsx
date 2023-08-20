@@ -1,18 +1,21 @@
 import React from 'react'
 import Button from './Button';
 
-const FormAddFriend = () => {
+const FormAddFriend = ({showAddFriend}) => {
   return (
-    <form className="form-add-friend">
-      <label>Friend Name</label>
-      <input type="text" />
+    <>
+      {showAddFriend && (
+        <form className="form-add-friend">
+          <label>Friend Name</label>
+          <input type="text" />
 
-      <label>Image Url</label>
-      <input type="text" />
+          <label>Image Url</label>
+          <input type="text" />
 
-      <Button>Add</Button>
-
-    </form>
+          <Button>Add</Button>
+        </form>
+      )}
+    </>
   );
 }
 

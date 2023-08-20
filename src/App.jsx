@@ -6,12 +6,22 @@ import Button from "./components/Button";
 import FormSplitBill from "./components/FormSplitBill";
 
 function App() {
+  const [showAddFriend, setShowAddFriend] = useState(false);
+
+  const handleShowFriend = () => {
+    console.log(showAddFriend)
+    setShowAddFriend(!showAddFriend);
+  };
+
   return (
     <div className="app">
       <div className="sidebar">
         <FriendList />
-        <FormAddFriend />
-        <Button>Add Friend</Button>
+        <FormAddFriend showAddFriend={showAddFriend} />
+        <Button handleShowFriend={handleShowFriend}>
+          {" "}
+          {showAddFriend === false ? "Add Friend" : "Close"}{" "}
+        </Button>
       </div>
       <FormSplitBill />
     </div>

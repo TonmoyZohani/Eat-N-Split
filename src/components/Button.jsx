@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Button = ({children}) => {
+const Button = ({ children, handleShowFriend }) => {
   return (
-  <button className='button'>{children}</button>
-  )
-}
+    <button onClick={() => handleShowFriend()} className="button">
+      {children}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
