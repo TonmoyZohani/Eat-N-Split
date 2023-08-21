@@ -1,7 +1,10 @@
 import React from "react";
 import Button from "./Button";
 
-const FormSplitBill = () => {
+const FormSplitBill = ({selectedFriend}) => {
+
+  console.log(selectedFriend)
+
   return (
     <form className="form-split-bill">
       <h2>Split a bill with X</h2>
@@ -12,7 +15,7 @@ const FormSplitBill = () => {
       <label>Your Expense</label>
       <input type="text" />
 
-      <label>X's Expense</label>
+      <label>{selectedFriend?.name} Expense</label>
       <input type="text" />
 
       <label>Who is paying the bill?</label>

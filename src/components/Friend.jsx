@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-const Friend = ({ friend, handleSetSelectedFriend,selectedFriend }) => {
+const Friend = ({ friend, handleSetSelectedFriend, selectedFriend }) => {
   return (
     <li>
       <img src={friend.image} alt={friend.name} />
@@ -21,9 +21,13 @@ const Friend = ({ friend, handleSetSelectedFriend,selectedFriend }) => {
         ""
       )}
 
-      {console.log(friend.id)}
+      {console.log(selectedFriend)}
+      {console.log(friend)}
 
-      <button onClick={() => handleSetSelectedFriend(friend.id)}> {selectedFriend ? "Cancel":"Select"}</button>
+      <button onClick={() => handleSetSelectedFriend(friend)}>
+        {" "}
+        {selectedFriend?.id === friend?.id ? "Cancel" : "Select"}
+      </button>
     </li>
   );
 };

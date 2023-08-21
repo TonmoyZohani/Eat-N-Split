@@ -5,6 +5,8 @@ const FormAddFriend = ({ handleSetNewFriend }) => {
   const [name, setName] = useState("");
   const [image, setImage] = useState("https://i.pravatar.cc/48");
 
+  console.log(selectedFriend)
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
