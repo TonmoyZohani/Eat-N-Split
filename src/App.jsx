@@ -45,6 +45,10 @@ function App() {
     setSelectedFriend((cur) => (cur?.id === friend?.id ? null : friend)); // if current id is equal to present one then it will be null
   };
 
+  const handleSplitBill = (value) => {
+    console.log(value);
+  };
+
   console.log(selectedFriend);
 
   return (
@@ -67,7 +71,7 @@ function App() {
           {showAddFriend === false ? "Add Friend" : "Close"}{" "}
         </Button>
       </div>
-      {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} />}
+      {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} handleSplitBill={handleSplitBill}/>}
     </div>
   );
 }
