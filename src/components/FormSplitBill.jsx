@@ -17,6 +17,10 @@ const FormSplitBill = ({ selectedFriend, handleSplitBill }) => {
     }
 
     handleSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
+
+    setBill("");
+    paidByUser("");
+    // paidByFriend("")
   };
 
   return (
