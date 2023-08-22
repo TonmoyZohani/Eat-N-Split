@@ -46,7 +46,13 @@ function App() {
   };
 
   const handleSplitBill = (value) => {
-    console.log(value);
+    setFriends((friends) =>
+      friends.map((friend) =>
+        friend.id === selectedFriend.id
+          ? { ...friend, balance: friend.balance + value }
+          : friend
+      )
+    );
   };
 
   console.log(selectedFriend);
@@ -71,7 +77,12 @@ function App() {
           {showAddFriend === false ? "Add Friend" : "Close"}{" "}
         </Button>
       </div>
-      {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} handleSplitBill={handleSplitBill}/>}
+      {selectedFriend && (
+        <FormSplitBill
+          selectedFriend={selectedFriend}
+          handleSplitBill={handleSplitBill}
+        />
+      )}
     </div>
   );
 }
